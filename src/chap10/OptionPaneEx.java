@@ -34,7 +34,7 @@ public class OptionPaneEx extends JFrame {
             add(messageBtn);
             add(tf);
 
-            inputBtn.addActionListener(new ActionListener() {
+            inputBtn.addActionListener(new ActionListener() {//<<Input Name 버튼을 선택하면 입력 다이얼 로그를 생성한다.
                 public void actionPerformed(ActionEvent e) {
                     // 입력 다이얼로그 생성
                     String name = JOptionPane.showInputDialog("이름을 입력하세요.");
@@ -43,7 +43,7 @@ public class OptionPaneEx extends JFrame {
                 }
             });
 
-            confirmBtn.addActionListener(new ActionListener() {
+            confirmBtn.addActionListener(new ActionListener() {//<<Conbfirm 버튼을 선택하면 확인 다이얼 로그를 생성한다.
                 public void actionPerformed(ActionEvent e) {
                     // 확인 다이얼로그 생성
                     int result = JOptionPane.showConfirmDialog(null,
@@ -59,7 +59,7 @@ public class OptionPaneEx extends JFrame {
                 }
             });
 
-            messageBtn.addActionListener(new ActionListener() {
+            messageBtn.addActionListener(new ActionListener() {//<<Message 버튼을 선택하면 메시지를 다이얼로그를 생성한다.
                 public void actionPerformed(ActionEvent e) {
                     // 메시지 다이얼로그 생성
                     JOptionPane.showMessageDialog(null, "조심하세요", "Message", JOptionPane.ERROR_MESSAGE);

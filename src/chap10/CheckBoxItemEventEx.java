@@ -31,6 +31,8 @@ public class CheckBoxItemEventEx extends JFrame {
             fruits[i].setBorderPainted(true); // 체크박스의 외곽선이 보이도록 설정
             c.add(fruits[i]); // 컨텐트팬에 체크박스 삽입
             fruits[i].addItemListener(listener); // 체크박스에 Item 리스너 등록
+            //<<fruits[i].addItemListener(new MyItemListener());로 하면 안 된다. 이렇게 하면 3개의 리스너가 제 각각
+            //sum 변수를 보유하게ㅣ때문이다.
         }
 
         sumLabel = new JLabel("현재 0 원 입니다."); // 가격 합을 출력하는 레이블 생성
@@ -45,8 +47,11 @@ public class CheckBoxItemEventEx extends JFrame {
         int sum = 0; // 가격의 합
 
         // 체크박스의 선택 상태가 변하면 itemStateChanged()가 호출됨
-        public void itemStateChanged(ItemEvent e) {
-            if(e.getStateChange() == ItemEvent.SELECTED) { // 체크박스가 선택된 경우
+        public void itemStateChanged(ItemEvent e) {//<<체크박스의 선택 상태가 변할 때 호출되며
+            // Item 이벤트가 발생한 체크박스를 판별하고 가격을 계산한다.
+            if(e.getStateChange() == ItemEvent.SELECTED) { // 체크박스가 선택된 경우 //<< e.getStateChange()는
+                // Item 이벤트가 발생한 체크박스의 현재 상태를 리턴하며 선택 상태인지를 판단하기 위해
+                // ItemEvent.SELECTED 상수와 비교한다.
                 if(e.getItem() == fruits[0]) // 사과 체크박스
                     sum += 100;
                 else if(e.getItem() == fruits[1]) // 배 체크박스

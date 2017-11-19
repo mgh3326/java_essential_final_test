@@ -18,9 +18,9 @@ public class ButtonImageEx extends JFrame {
         c.setLayout(new FlowLayout());
 
         // 3 개의 이미지를 읽어들인다.
-        ImageIcon normalIcon = new ImageIcon("images/normalIcon.gif");
-        ImageIcon rolloverIcon = new ImageIcon("images/rolloverIcon.gif");
-        ImageIcon pressedIcon = new ImageIcon("images/pressedIcon.gif");
+        ImageIcon normalIcon = new ImageIcon("images/normalIcon.gif");//<<normalIcon 아치콘
+        ImageIcon rolloverIcon = new ImageIcon("images/rolloverIcon.gif");//<<rolloverIcon 아이콘
+        ImageIcon pressedIcon = new ImageIcon("images/pressedIcon.gif");//<< pressedIcon 아이콘
 
         // 3개의 아이콘을 가진 버튼 컴포넌트 생성
         JButton btn = new JButton("call~~", normalIcon);

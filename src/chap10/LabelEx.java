@@ -42,7 +42,4 @@ public class LabelEx extends JFrame {
         new LabelEx();
     }
 }
-
-
-
-
+//예제 10-2

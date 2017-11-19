@@ -30,6 +30,8 @@ public class TextAreaEx extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JTextField t = (JTextField)e.getSource();
                 ta.append(t.getText() + "\n"); // 텍스트필드의 문자열을 텍스트영역에 붙임
+                //<<t.get.Text() 현재 텍스트 필드에 입력된 문자열 알아냄
+                //<<<Enter>키를 입력하면 Action 이벤트 발생
                 t.setText(""); // 현재 텍스트필드에 입력된 내용 지우기
             }
         });

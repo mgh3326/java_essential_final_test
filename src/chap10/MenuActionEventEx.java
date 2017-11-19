@@ -12,11 +12,11 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class MenuActionEventEx extends JFrame {
-    JLabel imgLabel = new JLabel(); // 빈 이미지를 가진 레이블
+    JLabel imgLabel = new JLabel(); // 빈 이미지를 가진 레이블 //<<이미지를 출력할 레이블
     MenuActionEventEx() {
         setTitle("Menu에 Action 리스너 만들기  예제");
         createMenu();
-        getContentPane().add(imgLabel, BorderLayout.CENTER);
+        getContentPane().add(imgLabel, BorderLayout.CENTER);//<<이미지 레이블을 콘텐트팬의 중앙에 부착
         setSize(250,200); setVisible(true);
     }
 
@@ -43,11 +43,11 @@ public class MenuActionEventEx extends JFrame {
             switch(cmd) { // 메뉴 아이템의 종류 구분
                 case "Load" :
                     if(imgLabel.getIcon() != null) return; // 이미 로딩되었으면 리턴
-                    imgLabel.setIcon(new ImageIcon("images/img.jpg")); break;
+                    imgLabel.setIcon(new ImageIcon("images/img.jpg")); break;//<<imgLabel에 이미지 로딩 및 출력
                 case "Hide" :
-                    imgLabel.setVisible(false); break;
+                    imgLabel.setVisible(false); break;//<<imgLabel이 보이지 않도록 변경
                 case "ReShow" :
-                    imgLabel.setVisible(true); break;
+                    imgLabel.setVisible(true); break;//<<imgLabel이 보이도록 변경
                 case "Exit" :
                     System.exit(0); break;
             }

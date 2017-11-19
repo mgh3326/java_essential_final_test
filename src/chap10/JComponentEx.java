@@ -28,7 +28,7 @@ public class JComponentEx extends JFrame {
         b3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JButton b = (JButton)e.getSource();
-                setTitle(b.getX() + "," + b.getY()); // 타이틀에 버튼 좌표 출력
+                setTitle(b.getX() + "," + b.getY()); // 타이틀에 버튼 좌표 출력 << JComponent.this.setTitle(...)로 해도됨
             }
         });
 

@@ -37,7 +37,7 @@ public class MenuEx extends JFrame {
         mb.add(new JMenu("Run")); // Run 메뉴 생성 삽입
 
         // 메뉴바를 프레임에 부착
-        setJMenuBar(mb);
+        setJMenuBar(mb);//<<메뉴바를 프레임에 붙임. 비로소 메뉴가 보인다.
     }
 
     public static void main(String [] args) {

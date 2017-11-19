@@ -32,3 +32,4 @@ public class TextFieldEx extends JFrame {
         new TextFieldEx();
     }
 }
+//예제 10-7

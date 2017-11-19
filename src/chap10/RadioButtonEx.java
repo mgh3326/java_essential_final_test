@@ -17,10 +17,10 @@ public class RadioButtonEx extends JFrame {
         Container c = getContentPane();
         c.setLayout(new FlowLayout());
 
-        ButtonGroup g = new ButtonGroup();  // 버튼 그룹 객체 생성
+        ButtonGroup g = new ButtonGroup();  // 버튼 그룹 객체 생성 //<<3개의 라디오 버튼을 묶을 버튼 그룹 객체 생성
 
         // 라디오버튼 3 개 생성
-        JRadioButton apple = new JRadioButton("사과");
+        JRadioButton apple = new JRadioButton("사과");//<<3개의 라디오버튼 생성, 두번째 라디오 버튼이 선택 상태
         JRadioButton pear = new JRadioButton("배", true);
         JRadioButton cherry = new JRadioButton("체리");
 
@@ -30,7 +30,7 @@ public class RadioButtonEx extends JFrame {
         g.add(cherry);
 
         // 컨텐트팬에 3 개의 라디오버튼 삽입
-        c.add(apple); c.add(pear); c.add(cherry);
+        c.add(apple); c.add(pear); c.add(cherry);//<<라디오 버튼이 컨텍트팬에 삽입 되어야 화면에 출력됨
 
         setSize(250,150);
         setVisible(true);

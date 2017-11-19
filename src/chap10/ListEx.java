@@ -33,7 +33,7 @@ public class ListEx extends JFrame {
 
         JList scrollList = new JList(fruits); // 문자열 리스트 생성
         c.add(new JScrollPane(scrollList)); // 리스트를 JScrollPane에 부착
-
+        //<<리스트를 스크롤 가능하게 하기 위해 JScrollPane에 부착하고, 다시 JScrollPane을 컨텐트펜에 부착함
         setSize(300,300);
         setVisible(true);
     }

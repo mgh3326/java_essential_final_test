@@ -19,7 +19,7 @@ public class CheckBoxEx extends JFrame {
 
         // 3 개의 체크박스를 생성한다.
         JCheckBox apple = new JCheckBox("사과");
-        JCheckBox pear = new JCheckBox("배", true);
+        JCheckBox pear = new JCheckBox("배", true);//<<선택 상태의 체크박스 생성
         JCheckBox cherry = new JCheckBox("체리");
 
         // 컨텐트팬에 3개의 체크박스 삽입
