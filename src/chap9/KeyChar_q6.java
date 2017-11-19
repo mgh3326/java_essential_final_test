@@ -13,7 +13,7 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 // F1키를 누르면 프레임 크기를 가로 세로 10픽셀씩 늘이고, F2 키를 누르면 가로 세로 10픽셀씩 줄이고, 'q' 키를 누르면 종료하도록 프로그램을 작성하라. 실행 화면은 다음과 같다. 키 입력을 받기 위해 컨텐트팬에 포커스를 주어야한다.
-public class KeyChar_q6 extends JFrame {//이거 아직 동작 안함 고쳐야됨
+public class KeyChar_q6 extends JFrame {//집 컴으로 하니까 잘되네 이유는 잘 모르겠음
     String text = "A";
     JButton btn = new JButton(text);
     Container c = getContentPane(); // 컨텐트 팬 알아내기
@@ -24,7 +24,7 @@ public class KeyChar_q6 extends JFrame {//이거 아직 동작 안함 고쳐야�
         c.setLayout(new FlowLayout());// 글자 넣을때 쓰는건가 보다 일단 주석 처리함
 
         c.add(btn);//
-        setSize(300, 200);
+        setSize(15, 150);
         c.addKeyListener(new MyKeyListener()); // 키 리스너 달기
 
         setVisible(true);
@@ -34,18 +34,14 @@ public class KeyChar_q6 extends JFrame {//이거 아직 동작 안함 고쳐야�
     class MyKeyListener extends KeyAdapter { // 키 리스너
 
         public void keyPressed(KeyEvent e) { // << 문자 키만 입력 받기 때문에 keyTyped()로 해도됨
-            Dimension size = c.getSize();
+            //Dimension size = c.getSize();
             if(e.getKeyCode()==KeyEvent.VK_F1)
             {
-                size.height+=10;
-                size.width+=10;
-                setSize(size);
+            setSize(getSize().width+10,getSize().height+10);
             }// 10 픽셀 늘림
             if(e.getKeyCode()==KeyEvent.VK_F2)
             {
-                size.height-=10;
-                size.width-=10;
-                setSize(size);
+                setSize(getSize().width-10,getSize().height-10);
 
             }
             if(e.getKeyCode()==KeyEvent.VK_Q)
