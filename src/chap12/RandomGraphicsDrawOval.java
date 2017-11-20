@@ -16,20 +16,22 @@ public class RandomGraphicsDrawOval extends JFrame {
     RandomGraphicsDrawOval() {
         setTitle("원을 0.5초 간격으로 랜덤한 위치에 그리기");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setContentPane(new MyPanel());
-
+        //setContentPane(new MyPanel());
+        MyPanel p = new MyPanel();
+        setContentPane(p);
         setSize(500, 500);
         setVisible(true);
     }
 
     class MyPanel extends JPanel implements Runnable {
         int x,y;
+        JPanel jp = new JPanel();
         public void paintComponent(Graphics g) {
             g.setColor(Color.RED);
             x = (int)(Math.random()*350);//0~350의 랜덤 x
             y = (int)(Math.random()*270);//0~270의 랜덤 y
-            g.drawOval(x, y, 50, 50);//반지름이 50
             new Thread(this).start(); // 스레드 시작
+            g.drawOval(x, y, 50, 50);//반지름이 50
         }
         public void run() {
             while(true) {
@@ -39,7 +41,8 @@ public class RandomGraphicsDrawOval extends JFrame {
 
                 x = (int)(Math.random()*350);//0~350의 랜덤 x
                 y = (int)(Math.random()*270);//0~270의 랜덤 y
-                
+                getParent().repaint();
+                //여기부터 다시
             }
         }
     }
@@ -48,4 +51,5 @@ public class RandomGraphicsDrawOval extends JFrame {
         new RandomGraphicsDrawOval();
     }
 }
-//그림 11-2-1
+//실습문제 12-2
+//원을 0.5초마다 랜덤한 위치로 그리기
