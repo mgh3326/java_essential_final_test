@@ -21,3 +21,4 @@ public class ThreadMainEx {
         System.out.println("현재 스레드 상태 = " + s);
     }
 }
+//예제 12-3

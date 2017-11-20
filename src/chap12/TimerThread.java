@@ -6,7 +6,8 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package chap12;//class TimerThread extends Thread {
+package chap12;
+//class TimerThread extends Thread {
 //    int n = 0;
 //
 //    public void run() {
@@ -28,3 +29,4 @@ package chap12;//class TimerThread extends Thread {
 //        th.start();
 //    }
 //}듀플레이트라서 모두 주석처리함
+//그림 12-5

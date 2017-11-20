@@ -53,7 +53,7 @@ public class RunnableTimerEx extends JFrame {
         setSize(250,150);
         setVisible(true);
 
-        th.start(); // 타이머 스레드의 실행을 시작하게 한다.
+        th.start(); // 타이머 스레드의 실행을 시작하게 한다.//<<이 라인 실행결과. TimerRunnalge의 run()메소드가 실행을 시작한다.
     }
     public static void main(String[] args) {
         new RunnableTimerEx();

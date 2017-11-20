@@ -7,7 +7,6 @@
  */
 
 package chap12;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -98,3 +97,4 @@ public class TabAndThreadEx  extends JFrame {
         new TabAndThreadEx("아무키나 빨리 눌러 바 채우기");
     }
 }
+//예제 12-6 짱신기신기
