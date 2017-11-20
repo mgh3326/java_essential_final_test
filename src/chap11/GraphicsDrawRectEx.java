@@ -34,3 +34,4 @@ public class GraphicsDrawRectEx extends JFrame {
         new GraphicsDrawRectEx();
     }
 }
+//그림 11-2-2

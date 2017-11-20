@@ -12,7 +12,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GraphicsDrawImageEx1 extends JFrame {
-    GraphicsDrawImageEx1() {
+    GraphicsDrawImageEx1() {//예제 11-5
         setTitle("원본 크기로 원하는 위치에 이미지 그리기");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(new MyPanel());

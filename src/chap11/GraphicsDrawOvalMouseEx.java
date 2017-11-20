@@ -33,7 +33,7 @@ public class GraphicsDrawOvalMouseEx extends JFrame {
             MyMouseListener listener = new MyMouseListener(); // 리스너 생성
 
             // listener를 아래 두 리스너로 공통으로 등록해야 한다.
-            addMouseListener(listener);	// Mouse 리스너 등록
+            addMouseListener(listener);	// Mouse 리스너 등록 <<주목
             addMouseMotionListener(listener); // MouseMotion 리스너 등록
         }
 
@@ -43,7 +43,9 @@ public class GraphicsDrawOvalMouseEx extends JFrame {
             }
             public void mouseDragged(MouseEvent e) {
                 end = e.getPoint(); // 마우스포인터(끝점)를 end 객체에 저장
-                repaint(); // 패널의 그리기 요청
+                repaint(); // 패널의 그리기 요청 << 주목
+                //<< repaint()가 호출되면, 자바 플랫폼에 의해 MyPanel의 paintComponent()가 호출된다.
+                // 여기서 start와 end 사이의 타원을 그린다.
             }
         }
 

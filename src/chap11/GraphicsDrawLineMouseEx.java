@@ -51,7 +51,7 @@ public class GraphicsDrawLineMouseEx extends JFrame {
                     vEnd.add(endP); // 끝점을 vEnd에 저장한다.
 
                     // 패널의 다시 그리기를 요청한다.
-                    repaint();
+                    repaint();//<<주목
                 }
             });
         }
@@ -71,3 +71,8 @@ public class GraphicsDrawLineMouseEx extends JFrame {
         }
     }
 }
+//여러 개의 선을 저장하기 위해서 Vector<Point> 객체 vStart, vEnd를 생성하고 시작점과 끝점을 가각 따로 저장합니다.
+//mousePressed()에서 마우스가 눌러진 점 startIP와 mouseReleased()에서 마우스의 끝점 endP를 vSTart,vEnd에 각각 저장합니다.
+//이제 중요한 것은 그 다음에 repaint()를 호출하는 것입니다. 이 호출로 인해 MyPanel이 다시
+//페인팅 되고 patinComponent()가 호출됩니다. paintComponent() 메소드는 vSTart와 vEnd에
+//지금까지 만들어진 선을 모두 그립니다.

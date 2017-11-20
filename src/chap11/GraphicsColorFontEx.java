@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GraphicsColorFontEx extends JFrame {
-    GraphicsColorFontEx() {
+    GraphicsColorFontEx() {//에제 11-2
         setTitle("문자열, Color, Font 사용  예제");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(new MyPanel()); // 새로운 패널을 생성하여 컨텐트팬으로 사용

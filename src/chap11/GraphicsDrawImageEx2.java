@@ -29,7 +29,7 @@ public class GraphicsDrawImageEx2 extends JFrame {
             super.paintComponent(g);
 
             // 이미지를 패널 크기로 조절하여 그린다
-            g.drawImage(img, 0, 0, getWidth(), getHeight(), this);
+            g.drawImage(img, 0, 0, getWidth(), getHeight(), this);//패널의 폭과 높이
         }
     }
 
@@ -37,3 +37,4 @@ public class GraphicsDrawImageEx2 extends JFrame {
         new GraphicsDrawImageEx2();
     }
 }
+//프레임의 크긱가 조절되면 자동을 ㅗ패널이 다시 그려지게 되어 패널의 크기에 맞추어 이미지를 다시 그립니다.

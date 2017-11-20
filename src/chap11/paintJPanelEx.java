@@ -22,8 +22,8 @@ public class paintJPanelEx extends JFrame {
 
     // JPanel을 상속받는 새 패널 구현
     class MyPanel extends JPanel {
-        public void paintComponent(Graphics g) { // 패널에 도형을 그린다.
-            super.paintComponent(g); // JPanel의 paintComponent() 호출
+        public void paintComponent(Graphics g) { // 패널에 도형을 그린다. //<<MyPanel의 내부를 그리는 ㄷ메소드로서 3개의 사각형을 그린다.
+            super.paintComponent(g); // JPanel의 paintComponent() 호출 << 패널 내에 이전에 그려진 잔상을 지우기 위해 호출한다.
             g.setColor(Color.BLUE); // 파란색 선택
             g.drawRect(10,10,50,50); // (10,10) 위치에 50x50 크기의 사각형 그리기
             g.drawRect(50,50,50,50); // (50,50) 위치에 50x50 크기의 사각형 그리기

@@ -21,7 +21,7 @@ public class GraphicsDrawRoundRectEx extends JFrame {
         setVisible(true);
     }
 
-    class MyPanel extends JPanel {
+    class MyPanel extends JPanel {//그림 11-2-3
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             g.setColor(Color.RED);
@@ -33,3 +33,4 @@ public class GraphicsDrawRoundRectEx extends JFrame {
         new GraphicsDrawRoundRectEx();
     }
 }
+//그림 11-2-3

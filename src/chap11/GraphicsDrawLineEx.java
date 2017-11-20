@@ -25,6 +25,7 @@ public class GraphicsDrawLineEx extends JFrame {
             super.paintComponent(g);
             g.setColor(Color.RED); // 빨간색을 선택한다.
             g.drawLine(20, 20, 100, 100);
+            //<<(20,20)과 (100,100)의 두 점을 연결하는 빨간색 선을 그린다.
         }
     }
 

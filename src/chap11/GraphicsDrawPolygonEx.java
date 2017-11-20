@@ -34,3 +34,4 @@ public class GraphicsDrawPolygonEx extends JFrame {
         new GraphicsDrawPolygonEx();
     }
 }
+//그림 11-3-1

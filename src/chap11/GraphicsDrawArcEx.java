@@ -12,7 +12,7 @@ import java.awt.*;
 
 public class GraphicsDrawArcEx extends JFrame {
     GraphicsDrawArcEx() {
-        setTitle("drawArc ���  ����");
+        setTitle("drawArc 사용  예제");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(new MyPanel());
 
@@ -32,3 +32,4 @@ public class GraphicsDrawArcEx extends JFrame {
         new GraphicsDrawArcEx();
     }
 }
+//그림 11-3-1

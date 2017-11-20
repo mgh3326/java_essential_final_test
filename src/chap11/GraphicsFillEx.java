@@ -23,7 +23,7 @@ public class GraphicsFillEx extends JFrame {
     class MyPanel extends JPanel {
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            g.setColor(Color.RED);
+            g.setColor(Color.RED);//<<setColor()는 칠하기 색으로도 사용
             g.fillRect(10,10,50,50); // 빨간색 사각형 칠하기
             g.setColor(Color.BLUE);
             g.fillOval(10,70,50,50); // 파란색 타원 칠하기
@@ -34,7 +34,7 @@ public class GraphicsFillEx extends JFrame {
             g.setColor(Color.ORANGE);
             int []x ={30,10,30,60};
             int []y ={250,275,300,275};
-            g.fillPolygon(x, y, 4);	// 오렌지색 다각형 칠하기
+            g.fillPolygon(x, y, 4);	// 오렌지색 다각형 칠하기 << x[]와 y[]로부터 4점으로 구성된 폐다각형 칠하기
         }
     }
 

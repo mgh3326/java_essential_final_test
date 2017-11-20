@@ -11,10 +11,13 @@ package chap11;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
 
 public class GraphicsDrawOvalEx extends JFrame {
     GraphicsDrawOvalEx() {
-        setTitle("drawOval ���  ����");
+        setTitle("drawOval 사용  예제");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setContentPane(new MyPanel());
 
@@ -33,3 +36,4 @@ public class GraphicsDrawOvalEx extends JFrame {
         new GraphicsDrawOvalEx();
     }
 }
+//그림 11-2-1
