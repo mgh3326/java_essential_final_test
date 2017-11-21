@@ -15,8 +15,8 @@ public class FileInputStreamEx {
         byte b[] = new byte [6]; // 비어 있는 byte 배열
         try {
             // "c:\\test.out" 파일을 읽어 배열 b에 저장
-            FileInputStream fin = new FileInputStream("c:\\test.out");
-            int n=0, c;
+            FileInputStream fin = new FileInputStream("c:\\tmp/test.out");
+            int n=0, c;//<<fin.read(b);의 한 줄로 코딩할 수 있다.
             while((c = fin.read())!= -1) {
                 b[n] = (byte)c; // 읽은 바이트를 배열에 저장
                 n++;
@@ -31,3 +31,11 @@ public class FileInputStreamEx {
         } catch(IOException e) { }
     }
 }
+//예제 13-4
+//실행화면
+/*
+c:\test.out에서 읽은 배열을 출력합니다.
+7 51 3 4 -1 24
+
+ */
+//예제 13-3 FileOutputStreamEx 에서 쓴 내용을 읽는다.

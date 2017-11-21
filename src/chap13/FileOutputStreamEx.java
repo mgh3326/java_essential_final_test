@@ -16,10 +16,15 @@ public class FileOutputStreamEx {
 
         try {
             FileOutputStream fout = new FileOutputStream("c:\\tmp/test.out");
-            for(int i=0;  i<b.length; i++)
+            for(int i=0;  i<b.length; i++)//<< fout.write(b); 한 줄로 코딩할 수 있다.
                 fout.write(b[i]); // 배열 b의 수를 바이너리 그대로 기록
             fout.close();
         } catch(IOException e) { }
         System.out.println("c:\\test.out을 저장하였습니다.");
     }
 }
+//13-3 실행화면
+/*
+c:\test.out을 저장하였습니다.
+
+ */

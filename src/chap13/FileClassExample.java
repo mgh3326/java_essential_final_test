@@ -9,7 +9,7 @@
 package chap13;
 
 import java.io.File;
-public class FileClassExample {
+public class FileClassExample {//<<디렉토리에 포함된 파일과 서브 디렉톨의 이름, 크기, 수정 시간을 출력하는 메소드
     // 디렉토리에 포함된 파일과 서브 디렉토리의 이름, 크기, 수정 시간을 출력하는 메소드
     public static void listDirectory(File dir) {
         System.out.println("-----" + dir.getPath() +  "의 서브 리스트 입니다.-----");
@@ -43,3 +43,21 @@ public class FileClassExample {
         listDirectory(new File("c:\\tmp")); // javasample로 변경한 후 리스트 출력
     }
 }
+//예제 13-5 실행 화면
+
+/*
+javasample	파일 크기: 0	수정한 시간: 11월 16 목 12:39:46
+java_sample	파일 크기: 0	수정한 시간: 11월 20 월 18:05:51
+system.txt	파일 크기: 219	수정한 시간: 11월 16 목 12:48:04 <<c:\\tmp의 파일과 서브 디렉터리 리스트
+test.out	파일 크기: 6	수정한 시간: 11월 20 월 18:04:38
+test.txt	파일 크기: 0	수정한 시간: 11월 20 월 17:59:32
+-----c:\tmp의 서브 리스트 입니다.-----
+javasample	파일 크기: 0	수정한 시간: 11월 16 목 12:39:46
+java_sample	파일 크기: 0	수정한 시간: 11월 20 월 18:05:51
+system.txt	파일 크기: 219	수정한 시간: 11월 16 목 12:48:04 <<java_sample을 javasample로 변경한 이후
+test.out	파일 크기: 6	수정한 시간: 11월 20 월 18:04:38
+test.txt	파일 크기: 0	수정한 시간: 11월 20 월 17:59:32
+
+Process finished with exit code 0
+
+ */

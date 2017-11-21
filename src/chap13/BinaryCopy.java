@@ -19,8 +19,8 @@ public class BinaryCopy {
         try {
             FileInputStream fi = new FileInputStream(src);  // 파일 입력 바이트 스트림 생성
             FileOutputStream fo = new FileOutputStream(dest); // 파일 출력 바이트 스트림 생성
-            while((c = fi.read()) != -1) {
-                fo.write((byte)c);
+            while((c = fi.read()) != -1) {//문자 하나 읽고 << fr.read()는 파일 끝을 만나면 -1 리턴
+                fo.write((byte)c);// 문자 하나 쓰고
             }
             fi.close();
             fo.close();
@@ -30,3 +30,14 @@ public class BinaryCopy {
         }
     }
 }
+//예제 13-7 실행화면
+/*
+파일이 없는 경우
+
+파일 복사 오류
+
+파일이 있는 경우
+
+c:\Users\Public\Pictures\Sample Pictures\desert.jpg를 c:\tmp\desert.jpg로 복사하였습니다.
+
+ */

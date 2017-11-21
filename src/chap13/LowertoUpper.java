@@ -10,13 +10,15 @@ package chap13;
 
 import java.io.*;
 
-public class FileReaderEx {
+
+public class LowertoUpper {
     public static void main(String[] args) {
         FileReader in = null;
         try {
             in = new FileReader("c:\\windows\\system.ini"); // 문자 입력 스트림 생성
             int c;
             while ((c = in.read()) != -1) { // 문자 단위로 파일 끝까지 읽는다.
+                if(Character.isLowerCase(c)) c=Character.toUpperCase(c);
                 System.out.print((char)c);
             }
             in.close();
@@ -26,23 +28,4 @@ public class FileReaderEx {
         }
     }
 }
-//예제 13-1
-//실행화면
-/*
-; for 16-bit app support
-[386Enh]
-woafont=dosapp.fon
-EGA80WOA.FON=EGA80WOA.FON
-EGA40WOA.FON=EGA40WOA.FON
-CGA80WOA.FON=CGA80WOA.FON
-CGA40WOA.FON=CGA40WOA.FON
-
-[drivers]
-wave=mmdrv.dll
-timer=timer.drv
-
-[mci]
-
-Process finished with exit code 0
-
- */
+//실습문제 13-2 문제 해결

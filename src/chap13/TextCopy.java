@@ -19,7 +19,7 @@ public class TextCopy {
         try {
             FileReader fr = new FileReader(src); // 파일 입력 문자 스트림에 연결
             FileWriter fw = new FileWriter(dest); // 파일 출력 문자 스트림에 연결
-            while ((c = fr.read()) != -1) { // 문자 하나 읽고
+            while ((c = fr.read()) != -1) { // 문자 하나 읽고 << fr.read()는 파일 끝을 만나면 -1 리턴
                 fw.write((char)c); // 문자 하나 쓰고
             }
             fr.close();
@@ -30,3 +30,8 @@ public class TextCopy {
         }
     }
 }
+//예제 13-7 실행화면
+/*
+c:\windows\system.ini를 c:\tmp\system.txt로 복사하였습니다.
+
+ */

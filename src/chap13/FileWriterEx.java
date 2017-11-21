@@ -18,7 +18,7 @@ public class FileWriterEx {
         int c;
         try {
             fout = new FileWriter("c:\\tmp\\test.txt"); // 파일과 연결된 출력 문자 스트림 생성
-            while ((c = in.read()) != -1) {
+            while ((c = in.read()) != -1) {//<<ctrl-z 키(EOF)가 입력될 때까지 반복
                 fout.write(c); // 키보드로부터 입력받은 문자를 파일에 저장
             }
             in.close();
@@ -28,3 +28,5 @@ public class FileWriterEx {
         }
     }
 }
+//예제 13-2
+//실행화면//만들어져야되는데 안만들어짐

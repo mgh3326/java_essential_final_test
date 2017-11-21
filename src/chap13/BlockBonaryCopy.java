@@ -29,3 +29,7 @@ public class BlockBonaryCopy {
         } catch (IOException e) { System.out.println("파일 복사 오류"); }
     }
 }
+//예제 13-8 실행화면
+/*
+c:\Users\Public\Pictures\Sample Pictures\desert.jpg를 c:\tmp\desert.jpg로 복사하였습니다.
+ */
