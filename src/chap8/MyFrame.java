@@ -17,7 +17,8 @@ public class MyFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        MyFrame frame = new MyFrame();
+        new MyFrame();
+//        MyFrame frame = new MyFrame(); 이렇게 해도 되는구나
     }
 }
 

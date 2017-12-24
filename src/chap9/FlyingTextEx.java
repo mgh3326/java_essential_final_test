@@ -12,7 +12,9 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class FlyingTextEx extends JFrame {
-    JPanel contentPane = new JPanel();
+    JPanel contentPane = new JPanel();//이게 꼭 위에 쓰여야하나?
+//        contentPane.setLayout(null); // 컨텐트팬의 배치관리자 삭제
+    //아걸 사용하기 위해 Jpanel을 생성해주는구나
     JLabel la = new JLabel("HELLO"); // 키 입력에 따라 움직일 레이블 컴포넌트
 
     FlyingTextEx() {

@@ -10,8 +10,8 @@ package chap8;
 import javax.swing.*;
 import java.awt.*;
 
-public class GridLayoutSample extends JFrame {
-    GridLayoutSample() {
+public class GridLayoutSample_m extends JFrame {
+    GridLayoutSample_m() {
         setTitle("GridLayout Sample");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         GridLayout grid = new GridLayout(4, 3);
@@ -28,7 +28,7 @@ public class GridLayoutSample extends JFrame {
         setVisible(true);
     }
     public static void main(String[] args) {
-        new GridLayoutSample();
+        new GridLayoutSample_m();
     }
 }
 
